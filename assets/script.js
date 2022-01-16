@@ -1,12 +1,17 @@
-var timerEl = document.getElementById('timer')
-var startQuiz = document.getElementById('startQuiz')
+var timerEl = document.querySelector('timer')
+var startBtn = document.querySelector("#start-button");
+var quizContainer = document.getElementById('quiz')
 var resultsContainer = document.getElementById('results')
+var questionEl = document.createAttribute('h1');
+var answersEl = document.createElement('ul');
+var li1 = document.createElement('li');
+var li2 = document.createElement('li');
+var li3 = document.createElement('li');
+var li4 = document.createElement('li');
+
+addEventListener('click', viewHighScores);
 
 function viewHighScores() {
-    addEventListener('click', viewHighScores);
-    console.log
-}
-document.querySelector("#save-answer");
 
 var questions = [
     {
@@ -60,17 +65,18 @@ var questions = [
         correctAnswer: '4'
     }
 ]
+var score = 0;
 
+for(var i = 0; i < questions.length; i++) {
+    var selection = inputButton(questions)
+}
 
 startButton.addEventListener('click', startQuiz)
-function startQuiz() {
-    var questionEl = document.createAttribute('h1');
-    var choicesEl = document.createElement('ul');
-    var selectionEl = document.createElement('li');
-    var selectionEl = document.createElement('li');
-    var selectionEl = document.createElement('li');
-    var selectionEl = document.createElement('li');
-    
+function startQuiz(questions, quizContainer, resultsContainer, submitButton) {
+    function displayQuestion(questions, quizContainer, resultsContainer) {
+    }
+    function displayAnswer(questions, quizContainer, resultsContainer) {
+    }
 }
 
 function timer() {
@@ -86,10 +92,5 @@ function timer() {
             clearInterval(timeInterval);
         }
     }, 1000);
-}
-function selection(){
-    console.log()
-}
-function nextQuetion(){
-
-}
+    timer.appendChild(timerEl)
+} 
