@@ -21,3 +21,20 @@ body {
     margin: 20px;
     padding: 10px;
 }
+#player-initials {
+    align-content: center;
+    padding: auto;
+}
+.slide{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .active-slide{
+    opacity: 1;
+    z-index: 2;
+  }
